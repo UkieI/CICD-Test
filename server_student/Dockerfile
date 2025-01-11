@@ -8,4 +8,4 @@ COPY target/server_student*.jar app.jar
 EXPOSE 8080
 
 # Chạy ứng dụng Spring Boot
-ENTRYPOINT ["java", "-jar", "/app.jar"]
+ENTRYPOINT ["java", "-jar", "app.jar"]

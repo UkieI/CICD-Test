@@ -40,11 +40,11 @@ jobs:
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_TOKEN }}
 
-     # 4. Build and push Docker image
-    - name: Build and push Docker images
-      uses: docker/build-push-action@v6
-      with:
-        context: ./server_student
-        push: true
-        tags: ukielz/ctdt-api-student:latest
+    # 4. Build and push Docker image
+    - name: Build Docker Image
+      run: |
+        docker build -t ukielz/ctdt-api-student:latest ./server_student
+
+    - name: Push Docker Image
+      run: docker push ukielz/ctdt-api-student:latest
 

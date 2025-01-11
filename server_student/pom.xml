@@ -13,6 +13,7 @@
     <version>0.0.1-SNAPSHOT</version>
     <name>server_student</name>
     <description>server_student</description>
+    <packaging>jar</packaging>
     <url/>
     <licenses>
         <license/>
@@ -62,7 +63,6 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
         </plugins>
-        <finalName>ctdt-api-images</finalName>
     </build>
 
 </project>
