@@ -1,0 +1,24 @@
+services:
+  nginx:
+    image: nginx:latest
+    container_name: nginx
+    ports:
+      - "80:80"  
+    volumes:
+      - ./nginx/configuration/custom_proxy_setting.conf:/etc/nginx/conf.d/custom_proxy_settings.conf
+    depends_on:
+      - student-container
+    networks:
+      - app_network
+
+  student-container:
+    image: my-spring-app  
+    container_name: student-container
+    ports:
+      - "8080:8080" 
+    networks:
+      - app_network
+
+networks:
+  app_network:
+    driver: bridge
