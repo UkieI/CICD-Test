@@ -43,8 +43,8 @@ jobs:
     # 4. Build and push Docker image
     - name: Build Docker Image
       run: |
-        docker build -t ukielz/ctdt-api-student:latest ./server_student
+        docker build -t ukielz/ctdt-api:latest ./server_student
 
     - name: Push Docker Image
-      run: docker push ukielz/ctdt-api-student:latest
+      run: docker push ukielz/ctdt-api:latest
 
